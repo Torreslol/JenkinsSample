@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5C39FBD465705C8D1B05EB /* Pods_jenkins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8D8C5BB5057B93649A0961 /* Pods_jenkins.framework */; };
 		F4C693C520AEC04E002DFC2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C693C420AEC04E002DFC2B /* AppDelegate.swift */; };
 		F4C693C720AEC04E002DFC2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C693C620AEC04E002DFC2B /* ViewController.swift */; };
 		F4C693CA20AEC04E002DFC2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C693C820AEC04E002DFC2B /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640A4CB8132E7D253BD0603F /* Pods-jenkins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jenkins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jenkins/Pods-jenkins.debug.xcconfig"; sourceTree = "<group>"; };
+		A3019B348D26D3843D763570 /* Pods-jenkins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jenkins.release.xcconfig"; path = "Pods/Target Support Files/Pods-jenkins/Pods-jenkins.release.xcconfig"; sourceTree = "<group>"; };
+		BE8D8C5BB5057B93649A0961 /* Pods_jenkins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jenkins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C693C120AEC04E002DFC2B /* jenkins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jenkins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C693C420AEC04E002DFC2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C693C620AEC04E002DFC2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C39FBD465705C8D1B05EB /* Pods_jenkins.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFEA223C5FB3D93824FBE64B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				640A4CB8132E7D253BD0603F /* Pods-jenkins.debug.xcconfig */,
+				A3019B348D26D3843D763570 /* Pods-jenkins.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDB4EB8AAF1C00510BDAE163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8D8C5BB5057B93649A0961 /* Pods_jenkins.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4C693B820AEC04E002DFC2B = {
 			isa = PBXGroup;
 			children = (
 				F4C693C320AEC04E002DFC2B /* jenkins */,
 				F4C693C220AEC04E002DFC2B /* Products */,
+				BFEA223C5FB3D93824FBE64B /* Pods */,
+				DDB4EB8AAF1C00510BDAE163 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C693D320AEC04F002DFC2B /* Build configuration list for PBXNativeTarget "jenkins" */;
 			buildPhases = (
+				B686AAA2201D1B66A3C33BA7 /* [CP] Check Pods Manifest.lock */,
 				F4C693BD20AEC04E002DFC2B /* Sources */,
 				F4C693BE20AEC04E002DFC2B /* Frameworks */,
 				F4C693BF20AEC04E002DFC2B /* Resources */,
+				1BCED6E5612356C4BD7C8120 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BCED6E5612356C4BD7C8120 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-jenkins/Pods-jenkins-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jenkins/Pods-jenkins-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B686AAA2201D1B66A3C33BA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jenkins-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4C693BD20AEC04E002DFC2B /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		F4C693D420AEC04F002DFC2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640A4CB8132E7D253BD0603F /* Pods-jenkins.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +362,7 @@
 		};
 		F4C693D520AEC04F002DFC2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3019B348D26D3843D763570 /* Pods-jenkins.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
