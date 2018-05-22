@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-          sh 'fastlane development_build'
+          steps {
+             sh 'fastlane development_build'
+          }
         }
         stage('Test'){
             steps {
