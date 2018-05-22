@@ -1,10 +1,8 @@
-pipeline { 
-    agent any 
+pipeline {
+    agent any
     stages {
-        stage('Build') { 
-            steps { 
-                echo 'Building....'
-            }
+        stage('Build') {
+          sh 'fastlane development_build'
         }
         stage('Test'){
             steps {
