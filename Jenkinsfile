@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build') {
           steps {
-             checkout scm
              sh 'cd ./fastlane'
              sh 'sudo bundle exec fastlane development_build'
           }
