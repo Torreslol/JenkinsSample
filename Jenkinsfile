@@ -5,7 +5,7 @@ pipeline {
           steps {
              checkout scm
              sh 'cd ./fastlane'
-             sh 'bundle exec fastlane development_build'
+             sh 'sudo bundle exec fastlane development_build'
           }
         }
         stage('Test'){
