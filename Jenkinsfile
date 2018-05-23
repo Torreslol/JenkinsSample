@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') {
           steps {
-             sh 'export PATH=/usr/local/bin:$PATH'
+             checkout scm
              sh 'cd ./fastlane'
-             sh 'source ~/.bash_profile && bundle exec fastlane development_build'
+             sh 'bundle exec fastlane development_build'
           }
         }
         stage('Test'){
